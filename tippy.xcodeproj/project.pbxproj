@@ -14,6 +14,7 @@
 		A77EB6ED1F46595800C6658E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A77EB6EB1F46595800C6658E /* LaunchScreen.storyboard */; };
 		A77EB6F81F46595800C6658E /* tippyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77EB6F71F46595800C6658E /* tippyTests.swift */; };
 		A77EB7031F46595800C6658E /* tippyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77EB7021F46595800C6658E /* tippyUITests.swift */; };
+		A7C094331F478F4D00BE827B /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C094321F478F4D00BE827B /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		A77EB6FE1F46595800C6658E /* tippyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tippyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A77EB7021F46595800C6658E /* tippyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tippyUITests.swift; sourceTree = "<group>"; };
 		A77EB7041F46595800C6658E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A7C094321F478F4D00BE827B /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				A77EB6E91F46595800C6658E /* Assets.xcassets */,
 				A77EB6EB1F46595800C6658E /* LaunchScreen.storyboard */,
 				A77EB6EE1F46595800C6658E /* Info.plist */,
+				A7C094321F478F4D00BE827B /* SettingsViewController.swift */,
 			);
 			path = tippy;
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 			files = (
 				A77EB6E51F46595800C6658E /* ViewController.swift in Sources */,
 				A77EB6E31F46595800C6658E /* AppDelegate.swift in Sources */,
+				A7C094331F478F4D00BE827B /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -514,6 +518,7 @@
 				A77EB7091F46595800C6658E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A77EB70A1F46595800C6658E /* Build configuration list for PBXNativeTarget "tippyTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +527,7 @@
 				A77EB70C1F46595800C6658E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A77EB70D1F46595800C6658E /* Build configuration list for PBXNativeTarget "tippyUITests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +536,7 @@
 				A77EB70F1F46595800C6658E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
