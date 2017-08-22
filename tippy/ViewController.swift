@@ -68,12 +68,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
 
     @IBAction func calculateTip(_ sender: Any) {
         let tipPercentages = [0.18, 0.2, 0.25]
-        let bill = Double(billField.text!.replacingOccurrences(of: "$", with: "")) ?? 0
+        let bill = Double(billField.text!.replacingOccurrences(of: "$", with: "").replacingOccurrences(of: ",", with: "")) ?? 0
         let tip = bill * tipPercentages[tipControl.selectedSegmentIndex]
         let total = bill + tip
 
-        tipLabel.text = String(format: "$%.2f", tip)
-        totalLabel.text = String(format: "$%.2f", total)
+        tipLabel.text = convertDoubleToStringCurrency(tip)
+        totalLabel.text = convertDoubleToStringCurrency(total)
     }
 
     @IBAction func tapClearBtn(_ sender: Any) {
@@ -87,16 +87,21 @@ class ViewController: UIViewController, UITextFieldDelegate {
         if (billField.text?.characters.count == 0) {
             field = string;
         } else {
-            let value = Int(Double(billField.text!.replacingOccurrences(of: "$", with: ""))! * 100)
+            let value = Int(Double(billField.text!.replacingOccurrences(of: "$", with: "").replacingOccurrences(of: ",", with: ""))! * 100)
             field = String(value) + string
         }
         
-        let calculated = String(format: "$%.2f", (Double(field)! / 100.0))
-        billField.text = calculated
-        
+        billField.text = convertDoubleToStringCurrency(Double(field)! / 100.0)
         calculateTip(billField)
 
         return false
+    }
+    
+    func convertDoubleToStringCurrency(_ price: Double) -> String {
+        let currency = NumberFormatter()
+        currency.numberStyle = .currency
+        currency.locale = Locale(identifier: "en_US")
+        return (currency.string(from: price as NSNumber)!)
     }
 }
 
